@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/swiper/css/swiper.css">
+    <style>
+    .swiper-container {
+        width: 100%;
+        
+    }
+    .swiper-slide a{
+    	display: block;
+    }
+    .swiper-slide a img{
+    	width: 100%;
+    }
+    .swiper-pagination-bullet {
+        background-color: transparent;
+        opacity: 1;
+        border: 1px solid #fff;
+        width: 8px;
+        height: 8px;
+        box-sizing: border-box;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #fff;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            	<a href="#">
+            		<img src="images/l1.jpg" alt="">
+            	</a>
+            </div>
+            <div class="swiper-slide">
+            	<a href="#">
+            		<img src="images/l2.jpg" alt="">
+            	</a>
+            </div>
+            <div class="swiper-slide">
+            	<a href="#">
+            		<img src="images/l3.jpg" alt="">
+            	</a>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+        <!-- 如果需要导航按钮 -->
+       <!--  <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+        <!-- 如果需要滚动条 -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+    <script src='lib/swiper/js/swiper.js'></script>
+    <script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal', // 垂直切换选项水平(horizontal)或垂直(vertical)
+        autoplay: {
+            delay: 1000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false,//当用户滑动停止的时候禁止自动轮播图
+        },
+        loop: true, //  是否开启无缝轮播图
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    })
+    </script>
+</body>
+
+</html>
